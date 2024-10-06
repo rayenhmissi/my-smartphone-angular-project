@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>table de smartphones</th>
+                    </tr>
+                </thead>
+                <tbody *ngForm="let smartphone of smartphone">
+                    <tr>
+                        <th>id de smartphone</th>
+                        <th>model de smartphone</th>
+                        <th>ram de smartphone</th>
+                        <th>stockage de smartphone</th>
+                        <th>prix de smartphone</th>
+                        <th>date creation de smartphone</th>
+                    </tr>
+                    <tr>
+                        <td>{{ smartphone.idsmartphone }}</td>
+                        <td>{{ smartphone.modelsmartphone }}</td>
+                        <td>{{ smartphone.ram }}</td>
+                        <td>{{ smartphone.stockage }}</td>
+                        <td>{{ smartphone.prixsmartphone }}</td>
+                        <td>{{ smartphone.datecreationsmartphone }}</td>
+                    </tr>
+                    <tr>
+                        <td><a class="btn btn-danger" (click)="supprimersmartphone(smartphone)">supprimer un smartphone</a></td>
+                        <td><a class="btn btn-success" (click)="modifiersmartphone(smartphone)" [routerLink="['./updatesmartphone',smartphone.idsmartphone]"]>modifier un smartphone</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

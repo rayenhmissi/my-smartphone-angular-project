@@ -1,0 +1,37 @@
+<div class="container">
+    <div>
+        <h2>ajouter un smartphone</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label for="idsmartphone">ID smartphone</label>
+            <input type="text" [(@ngModel )]="newsmartphone.idsmartphone" name="idsmartphone" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label for="modelesmartphone">Modèle smartphone</label>
+            <input type="text" [(@ngModel )]="newsmartphone.modelesmartphone" name="modelesmartphone" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label for="ram">RAM</label>
+            <input type="number" [(@ngModel )]="newsmartphone.ram" name="ram" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label for="stockage">Stockage</label>
+            <input type="number" [(@ngModel )]="newsmartphone.stockage" name="stockage" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label for="prixsmartphone">Prix smartphone</label>
+            <input type="number" [(@ngModel )]="newsmartphone.prixsmartphone" name="prixsmartphone" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label for="datecreactionsmartphone">Date de création smartphone</label>
+            <input type="date" [(@ngModel )]="newsmartphone.datecreactionsmartphone" name="datecreactionsmartphone" class="form-control">
+        </div>
+        <div class="mt-2">
+            <button type="submit" (click)="ajoutsmartphone()" class="btn btn-primary">Ajouter</button>
+        </div>
+        <div>
+            <h2> {{ message }} </h2>
+        </div>
+    </form>
+</div>
